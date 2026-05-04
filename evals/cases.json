@@ -1,0 +1,116 @@
+{
+  "version": "2.4",
+  "skill": "research-frame",
+  "cases": [
+    {
+      "id": "case-01-light-trigger",
+      "name": "LIGHT 모드 트리거 + 확신도 cap",
+      "input": "라이트 리서치 해줘 — 국내 스타벅스 Q3 실적",
+      "expected": {
+        "mode": "LIGHT",
+        "confidence_cap": 50,
+        "why_gate": "exempt",
+        "output_path_prefix": "_research/LIGHT_",
+        "axes_count_gte": 2
+      },
+      "invariants_checked": [
+        4,
+        5
+      ]
+    },
+    {
+      "id": "case-02-deep-default",
+      "name": "DEEP 기본 모드 (키워드 없음)",
+      "input": "AI 규제 동향 리서치해줘",
+      "expected": {
+        "mode": "DEEP",
+        "why_gate": "required",
+        "competing_hypotheses_min": 3,
+        "fig_enabled": true,
+        "regression_hardcap": 3
+      },
+      "invariants_checked": [
+        1,
+        3,
+        6
+      ]
+    },
+    {
+      "id": "case-03-why-gate-ambiguous",
+      "name": "WHY 연결점 불명 — 거부 금지",
+      "input": "이거 리서치해줘",
+      "expected": {
+        "action": "estimate_and_proceed",
+        "rejection": false,
+        "confidence": 50,
+        "estimation_logged": true
+      },
+      "invariants_checked": [
+        1
+      ]
+    },
+    {
+      "id": "case-04-fig-single-source",
+      "name": "FIG — 단일 소스 수치는 신뢰도에서 배제",
+      "input": "DEEP 리서치 중 §2-1에서 핵심 수치가 단일 소스만 존재",
+      "expected": {
+        "fig_trigger": "depth_re_judgment_B",
+        "axis_3_5_treatment": "excluded",
+        "flagged_in_3_2": true
+      },
+      "invariants_checked": [
+        1
+      ]
+    },
+    {
+      "id": "case-05-light-to-deep-transition",
+      "name": "LIGHT→DEEP 전환 시 파일 rename",
+      "input": "라이트 리서치 결과 기반으로 딥 리서치 해줘",
+      "expected": {
+        "file_operation": "rename",
+        "copy_forbidden": true,
+        "light_section": "§초안",
+        "deep_template_appended": true
+      },
+      "invariants_checked": [
+        5
+      ]
+    },
+    {
+      "id": "case-06-blind-s1-asymmetry",
+      "name": "§4 BLIND S1 비대칭 감지 — 선험적 예외 없는 축",
+      "input": "3축 DEEP 리서치, 축별 증거수 A=20, B=5, C=7 (평균=10.67, A/평균=1.87, B/평균=0.47)",
+      "expected": {
+        "s1_triggered": false,
+        "reason": "A=1.87x (<3.0), B=0.47x (>0.3) — 임계 이내",
+        "blind_log_required": true
+      },
+      "invariants_checked": [
+        7
+      ]
+    },
+    {
+      "id": "case-07-expand-budget-dynamic",
+      "name": "§5 EXPAND 예산 동적 산정 — 4축 리서치",
+      "input": "DEEP 4축 리서치, 프레임밖 탐색 요청",
+      "expected": {
+        "mode": "DEEP",
+        "expand_budget": 2,
+        "budget_formula": "4 * 0.5 = 2",
+        "light_forbidden_check": true,
+        "commitment_required": true,
+        "return_metrics": [
+          "turns<=3",
+          "convergence4_axes>=2"
+        ]
+      },
+      "invariants_checked": [
+        8
+      ]
+    }
+  ],
+  "pass_criteria": {
+    "all_cases_must_pass": true,
+    "any_invariant_violation": "FAIL"
+  }
+}
