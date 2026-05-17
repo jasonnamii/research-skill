@@ -1,7 +1,7 @@
 ---
 name: research-skill
-description: "체계적 리서치 엔진. WHY·HOW·SCOPE + BLIND·EXPAND + 7층 사고. LIGHT·DEEP·TURBO·EXPAND 4모드. v3.0: research-frame→research-skill 리네임 + 토큰 다이어트 (인라인 템플릿·INV·v2.7 의무표 references 위임). v2.7 시스템3(EVIDENCE_BODY·SOURCE_CONTRAST·CLAIM_PROVENANCE) + 본질5(양적포화·1차출처·정량불확실성·반증대칭·시간성) 보존. P1: 리서치스킬, 리서치프레임, 리서치설계, 가설검증, 교차분석, 축별조사, 5장르, 1차출처, 반증대칭, LIGHT, DEEP, TURBO, EXPAND, BLIND, 맹점감지, 프레임밖, 7층사고, 딥리서치, 확장리서치, 터보리서치, 라이트리서치, 깊은리서치, 넓은리서치, 빠른리서치, 가벼운리서치. P2: 리서치해줘, 조사해줘, 축별분석해줘, 딥리서치해줘, 확장리서치해줘, 터보리서치해줘, 라이트리서치해줘, 깊게리서치해줘, 넓게리서치해줘, research, deep research, expand research, turbo research, light research, blindspot, expand. P3: research frame, hypothesis verification, cross-analysis, blindspot detection, evidence body, source contrast, claim provenance. P4: 본격 리서치·다축 조사·가설 의심·본문 원자료 인용 필요. P5: _research/로, .md로. NOT: 정책기획(→policy-planning), 단순팩트체크(→fact-checker), 소스인용(→UP §E)."
-version: 3.0
+description: "발동 트리거 2개만: '딥리서치' 또는 '확장리서치'. 그 외 단어(리서치·조사·research 등 일반어)로는 발동 ✗. DEEP·EXPAND 모드 7층 사고 리서치 엔진(WHY·HOW·SCOPE + BLIND + EXPAND). 본격 다축 조사·가설검증·1차출처 인용·반증대칭. NOT: 정책기획(→policy-planning), 단순팩트체크(→fact-checker)."
+version: 3.1
 ---
 
 # Research Skill — WHY·HOW·SCOPE + 7층 사고
