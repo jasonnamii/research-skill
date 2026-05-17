@@ -8,12 +8,34 @@ version: 3.1
 
 🔗 **REQUIRES:** `trigger-dictionary` (선행 로드) — §1~§5 전구간 정식명 발동. INV 9.
 
+
+## Skill Boundaries
+
+- **하는 것** — "발동 트리거 2개만: '딥리서치' 또는 '확장리서치'.
+- **안 하는 것** — 정책기획(→policy-planning), 단순팩트체크(→fact-checker)."
+
 리서치 "왜·어떻게·어디까지" 구조화. UP §E 위에 7층(L0 제1원리·L1 장르·L2 홈즈·L3 삼각·L4 연역수렴·L5 아날로지·L6 맥가이버·L7 오컴) 중첩.
 
 **발동:** 다축·가설검증·교차분석 (단순 팩트체크는 UP §E)
 **🛡️ INV·PREFLIGHT·RESET·STEALTH·FINAL_RENDER_GATE·v2.7 의무 8종(B1~B5·S1~S3):** → `references/invariants.md`
 
 ---
+
+## When to Use
+
+- 사용자가 P2 트리거 동사구 같은 표현으로 발동
+- 도메인 작업이 필요한 시점
+- **안 쓸 때** — 정책기획(→policy-planning), 단순팩트체크(→fact-checker)."
+
+
+## Prerequisites
+
+| # | 체크 | 미충족 시 |
+|---|------|-----------|
+| 1 | 대상·입력 명확 (스킬 발동 의도 확인) | 1줄 확인 후 진입 |
+| 2 | references/ 폴더 접근 가능 | inline fallback |
+| 3 | scripts/ 실행 권한 | 권한 보정 후 재시도 |
+
 
 ## 모드
 
@@ -84,7 +106,36 @@ LIGHT→DEEP: rename. **흐름:** §1 WHY → 게이트 → §2 HOW → 게이�
 
 ---
 
-## Gotchas (Top 10)
+## Reference Index
+
+| 파일 | 내용 | 언제 |
+|---|---|---|
+| `references/blind.md` | blind | 해당 단계 진입 시 |
+| `references/expand.md` | expand | 해당 단계 진입 시 |
+| `references/gotchas-extended.md` | gotchas extended | 해당 단계 진입 시 |
+| `references/how.md` | how | 해당 단계 진입 시 |
+| `references/invariants.md` | invariants | 해당 단계 진입 시 |
+| `references/output-template.md` | output template | 해당 단계 진입 시 |
+| `references/rationale.md` | rationale | 해당 단계 진입 시 |
+| `references/scope.md` | scope | 해당 단계 진입 시 |
+| `references/turbo.md` | turbo | 해당 단계 진입 시 |
+| `references/why.md` | why | 해당 단계 진입 시 |
+
+## Next Phase
+
+본 스킬 작업 후 자연스럽게 이어지는 흐름:
+
+- 후속 작업 → `policy-planning`
+- 후속 작업 → `fact-checker`
+
+## Output Path
+
+| 산출물 | 경로 |
+|---|---|
+| 주 산출물 | `mnt/outputs/research-skill\_{topic}_{YYYY-MM-DD}.md` |
+| 리서치 결과 (해당 시) | `{VAULT}/_skills research/research-skill/{YYYY-MM-DD}_{topic}.md` |
+
+## Failure Modes (Gotchas) (Top 10)
 
 1. 중복 회계 → 단일 지점
 2. WHY 게이트 스킵 → 3개 채움
