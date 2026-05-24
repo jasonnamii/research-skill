@@ -1,6 +1,9 @@
 ---
 name: research-skill
-description: "발동 트리거 2개만: '딥리서치' 또는 '확장리서치'. 그 외 단어(리서치·조사·research 등 일반어)로는 발동 ✗. DEEP·EXPAND 모드 7층 사고 리서치 엔진(WHY·HOW·SCOPE + BLIND + EXPAND). 본격 다축 조사·가설검증·1차출처 인용·반증대칭. NOT: 정책기획(→policy-planning), 단순팩트체크(→fact-checker)."
+description: |
+  발동 트리거 2개만 — '딥리서치' 또는 '확장리서치'. 그 외 단어(리서치·조사·research 등 일반어)로는 발동 ✗. DEEP·EXPAND 모드 7층 사고 리서치 엔진.
+  P1: 딥리서치, 확장리서치.
+  NOT: 정책기획(→policy-planning), 단순팩트체크(→fact-checker), 일반리서치 발동 차단.
 version: 3.1
 ---
 
