@@ -1,4 +1,18 @@
-## v3.0 — 2026-05-04
+## v3.1 — 2026-06-08
+
+### 변경 — 자기완결화 (외부 스킬 의존 제거)
+- **trigger-dictionary 의존 제거:** SKILL.md 최상단 `🔗 REQUIRES: trigger-dictionary` 삭제 → `🧩 SELF-CONTAINED`. 외부 스킬 미로드 시에도 단독 실행 가능.
+- **사고도구 §6 내장:** 구판은 7층 사고도구(제1원리·홈즈·엄브렐러·연역수렴 등)의 정의를 trigger-dictionary에 위임하고 §0-0 HARD-FIRE 자동 호출에 의존. v3.1은 각 도구를 SKILL.md §6에 1줄 정의로 내장 → 의미론 자기완결. §6를 단일 진실원천(SSOT)으로 유지.
+- **INVARIANT 9 재정의:** "트리거 연동 불변(외장화)" → "사고도구 내장 불변(자기완결)". 본문에 도구명을 박고 §6 정의대로 적용, 의역·변형·생략 = FAIL.
+- **R7 재작성:** 의미론 외장화 근거 → 내장화 근거(외부 스킬 미로드 시 동일 작동, 결합도·로드순서 의존 제거).
+- **표현 통일:** reference 전반의 "트리거 연동:" → "사고도구 (§6 내장):", "트리거 정식명 발동" → "사고도구 적용". 인젝션 방어선·gotchas·turbo·README(ko/en) 정합 반영.
+
+### 변경 — 검증·품질 정합 (집안 표준 정렬)
+- **레거시 검증기 교체:** `scripts/validate.py`를 research-frame 시절 레거시판 → 라이브러리 표준판(17/18 스킬 공용)으로 교체. 레거시만 강제하던 `version` 필드(라이브러리 전체 0개 보유)·hub 7KB 하드캡 등 허위 실패 제거. 표준판은 YAML·P-tier·broken-pointer·중복 SKILL.md·desc↔body 정합을 검증.
+- **evals 원본 복원:** `evals/cases.json`(7케이스) — vault 재정리 중 활성본(`~/.claude`)에서만 유실됐던 것으로, dev 레포(`github-repos/skill-repos/research-skill`)의 v2.4 원본을 그대로 복원(메타데이터만 v3.1·research-skill로 갱신). INV 1·3·4·5·6·7·8 회귀 + pass_criteria 포함. ※스포크(references 10종)는 유실 없음 — 활성본·dev 레포 동일.
+- **트리거 taxonomy 명시:** SKILL.md에 `<!-- Trigger Conditions P1~P5·NOT -->` 블록 추가. 발동 우선순위 문서화 + 표준 검증기 P-tier 경고 해소(P1=8·P2=4·P3=7·P5=3).
+- **Gotchas 헤더 정합:** "Failure Modes (Gotchas)" → "Gotchas — Failure Modes". 표준 검증기 Gotchas 섹션 탐지.
+- **검증 결과:** 표준 검증기 `valid: true` / errors 0 / warnings 0 / broken-pointer 0.
 
 ### 변경
 - **이름 변경:** `research-frame` → `research-skill` (UP P1 키워드 일치, 형 지시 literal)

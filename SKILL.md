@@ -6,7 +6,16 @@ description: |
 
 # Research Skill — WHY·HOW·SCOPE + 7층 사고
 
-🔗 **REQUIRES:** `trigger-dictionary` (선행 로드) — §1~§5 전구간 정식명 발동. INV 9.
+🧩 **SELF-CONTAINED:** 외부 스킬 의존 없음. §1~§5에서 쓰는 7층 사고도구(제1원리·홈즈·엄브렐러 등)는 §6에 자체 정의·내장. INV 9.
+
+<!-- Trigger Conditions
+P1: 리서치스킬, 딥리서치, 확장리서치, research-skill, deep research, deep-research, expand research, 리서치 프레임
+P2: 축별분석해줘, 가설검증해줘, 교차분석해줘, 리서치 설계해줘
+P3: ACH, MECE, 수렴4축, FIG, 5장르 대비, BLIND, EXPAND
+P5: 축별 리서치 산출물, DEEP 리포트, 맹점 로그
+NOT: 정책기획(→policy-planning), 단순팩트체크(→fact-checker), 일반 '리서치·조사' 단독 ✗
+-->
+
 
 
 ## Skill Boundaries
@@ -25,7 +34,7 @@ description: |
 
 - 사용자가 P2 트리거 동사구 같은 표현으로 발동
 - 도메인 작업이 필요한 시점
-- **안 쓸 때** — 정책기획(→policy-planning), 단순팩트체크(→fact-checker)."
+- **안 쓸 때** — Skill Boundaries 참조
 
 
 ## Prerequisites
@@ -52,7 +61,7 @@ description: |
 
 LIGHT→DEEP: rename. **흐름:** §1 WHY → 게이트 → §2 HOW → 게이트 → §3 SCOPE ↳§4 BLIND → §5 EXPAND → 편입
 
-**원칙:** 중복 회계 제거 · FIG 3블록 · 예산제 · 객관 메트릭 복귀 · 정식명 본문 노출(INV 9) · **본문 인용(INV 10)**
+**원칙:** 중복 회계 제거 · FIG 3블록 · 예산제 · 객관 메트릭 복귀 · 사고도구 본문 적용(INV 9) · **본문 인용(INV 10)**
 
 | references/ | 역할 |
 |---|---|
@@ -60,6 +69,7 @@ LIGHT→DEEP: rename. **흐름:** §1 WHY → 게이트 → §2 HOW → 게이�
 | `blind.md`·`expand.md` | §4·§5 본문 |
 | `invariants.md` | INV 12 + v2.7 의무 8종 + FINAL_RENDER_GATE + Self-Check |
 | `output-template.md` | DEEP·LIGHT 산출 템플릿 (피라미드 원칙 + PRISMA 투명성) |
+| `thinking-tools.md` | §6 사고도구 정의 SSOT (내장·자기완결) |
 | `rationale.md`·`turbo.md`·`gotchas-extended.md` | 근거·병렬·함정 |
 
 ---
@@ -76,21 +86,23 @@ LIGHT→DEEP: rename. **흐름:** §1 WHY → 게이트 → §2 HOW → 게이�
 
 ---
 
-## §6 트리거 (v2.6)
+## §6 사고도구 7층 (내장 — v3.1)
 
-7층×정식명×주입. **본문 노출 필수** (HARD-FIRE, STEALTH 면제).
+7층 사고도구 **자체 내장·적용**(외부 스킬 의존 ✗). 정의 SSOT = `thinking-tools.md`. 본문에 도구명 박고 정의대로 적용·노출(STEALTH 면제). 의역·생략 = INV 9 FAIL.
 
-| 층 | 정식명 | 주입 |
+| 층 | 사고도구 | 적용 위치 |
 |---|---|---|
 | L0 | 제1원리·백본·작업설계자·트리아지 | §1-1·모드 |
-| L1 | 엄브렐러·프리모르템 | §2-1 장르 |
+| L1 | 엄브렐러·프리모르템 | §2-1 |
 | L2 | 홈즈 | §2-1·§4 |
-| L3 | (수렴4축·FIG 내재) | §2 |
+| L3 | 수렴4축·FIG 내재 | §2 |
 | L4 | 연역수렴·오컴·외과적·수정4 | §2-3·§2-4 |
 | L5 | 아날로지·줌 | §5 T2·T3 |
 | L6 | 맥가이버·틀밖·절대자 | §3-2·§1-3·§5 T1 |
 | L7 | 오컴·외과적 | §3-5·FIG |
 | 종료 | 스켈레톤·제출청소·타임스톤 | §3-4·§5 |
+
+→ 정의·적용: `thinking-tools.md`
 
 ---
 
@@ -118,6 +130,7 @@ LIGHT→DEEP: rename. **흐름:** §1 WHY → 게이트 → §2 HOW → 게이�
 | `references/output-template.md` | output template | 해당 단계 진입 시 |
 | `references/rationale.md` | rationale | 해당 단계 진입 시 |
 | `references/scope.md` | scope | 해당 단계 진입 시 |
+| `references/thinking-tools.md` | §6 사고도구 정의 SSOT | §6 발동 시 |
 | `references/turbo.md` | turbo | 해당 단계 진입 시 |
 | `references/why.md` | why | 해당 단계 진입 시 |
 
@@ -135,14 +148,14 @@ LIGHT→DEEP: rename. **흐름:** §1 WHY → 게이트 → §2 HOW → 게이�
 | 주 산출물 | `mnt/outputs/research-skill\_{topic}_{YYYY-MM-DD}.md` |
 | 리서치 결과 (해당 시) | `{VAULT}/_skills research/research-skill/{YYYY-MM-DD}_{topic}.md` |
 
-## Failure Modes (Gotchas) (Top 10)
+## Gotchas — Failure Modes (Top 10)
 
 1. 중복 회계 → 단일 지점
 2. WHY 게이트 스킵 → 3개 채움
 3. 축 오염 → 병렬 발행
 4. LIGHT cap 초과 → 50 절삭
 5. FIG 미가동 → 수집+결론 필수
-6. 트리거 정식명 누락 → §6 노출(INV 9)
+6. 사고도구 미적용 → §6 내장 정의로 적용(INV 9)
 7. EXPAND 자의 연장 → 객관 메트릭
 8. **본문 원자료 미인용** → INV 10·EVIDENCE_BODY FAIL
 9. **5장르 후 단일장르 결론** → INV 11·SOURCE_CONTRAST FAIL

@@ -1,6 +1,6 @@
 {
-  "version": "2.4",
-  "skill": "research-frame",
+  "version": "3.1",
+  "skill": "research-skill",
   "cases": [
     {
       "id": "case-01-light-trigger",
@@ -112,5 +112,6 @@
   "pass_criteria": {
     "all_cases_must_pass": true,
     "any_invariant_violation": "FAIL"
-  }
+  },
+  "_restored_from": "github-repos/skill-repos/research-skill (v2.4 원본 evals — vault 재정리 중 활성본에서 유실분 복원)"
 }
