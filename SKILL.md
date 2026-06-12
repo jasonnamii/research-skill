@@ -1,5 +1,6 @@
 ---
 name: research-skill
+version: 1.0
 description: |
   발동 트리거 한글·영문 페어 — 한글 '리서치스킬·딥리서치·확장리서치' / 영문 'research-skill·research skill·deep research·deep-research·expand research·expanded research·expand-research'. 트리거: 리서치스킬, 딥리서치, 확장리서치, research-skill, research skill, deep research, deep-research, expand research, expanded research, expand-research, 리서치스킬 발동, 리서치스킬로, 딥리서치로. NOT: 정책기획(→policy-planning), 단순팩트체크(→fact-checker), 일반 '리서치·조사·research' 단독 발동 ✗.
 ---
